@@ -14,6 +14,23 @@
   </header>
 
   <div class="main">
+    <%= form_with model: @title, local: true do |f|%>
+      <div class="field">
+        <%= f.label :subject, "SUBJECT" %><br />
+        <%= f.text_area :subject, class: :form__text, id:"title_subject" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :text, "CONTENT" %><br />
+        <%= f.text_area :text, class: :form__text, id:"title_text" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "CREATE", class: :form__btn  %>
+      </div>
+    <% end %>
+  </div>
+        
   </div>
 
   <div class="title-contents">

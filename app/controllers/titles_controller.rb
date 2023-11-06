@@ -1,7 +1,9 @@
 class TitlesController < ApplicationController
   before_action :move_to_index, except: :index
+
   def index
-    @titles = Title.all
+    @title = Title.new
+    @titles = Title.all.order("created_at DESC")
   end
 
   def new
@@ -9,7 +11,7 @@ class TitlesController < ApplicationController
   end
 
   def create
-    Title.create(title_params)
+    @title = Title.create(title_params)
     redirect_to root_path
   end
 

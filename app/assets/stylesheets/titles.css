@@ -8,6 +8,7 @@ header {
   height: 60px;
   display: flex;
   justify-content: space-between;
+  margin: 0 0 50px;
 }
 
 h1 {
@@ -54,15 +55,22 @@ h1 {
 .main {
   background-color: #ffffff;
   width: 100vw;
-  height: 300px;
+  height: 200px;
 }
 
 .title-contents {
   background-color: #e6e6fa;
-  height: calc(100vh - 60px - 300px);
+  height: calc(100vh - 60px - 200px);
   text-align: center;
 }
 
 .title {
   padding: 20px 0 50px;
+}
+
+.field, .actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
 }

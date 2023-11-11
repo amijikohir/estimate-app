@@ -1,0 +1,8 @@
+<div class="card">
+  <div class="card__body">
+    <%= link_to title.subject, titles_path(title.id), class: :card__title%>
+    <p class="card__summary">
+      <%= title.text %>
+    </p>
+  </div>
+</div>
